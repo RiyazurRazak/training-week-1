@@ -4,7 +4,8 @@ namespace week_1
 {
     internal class BestPractices
     {
-        static void Main(string[] args)
+        // renamed the Main to main to run other files in the projects!
+        static void main(string[] args)
         {
             Console.WriteLine("Enter Your Age");
             int age = Convert.ToInt32(Console.ReadLine());
