@@ -19,7 +19,33 @@ namespace week_1
             int totalDuplicateElements = duplicateValueArray.Length - distinctContainer.Count;
             Console.WriteLine("Total duplicate values are: " +totalDuplicateElements);
 
-            // Second Question
+            // second question
+
+            int[] arrayA = new int[] { 1, 2, 5, 3, 4 };
+            int[] arrayB = new int[] { 7, 6, 9, 10, 8 };
+            int[] mergeArray = new int[arrayA.Length + arrayB.Length];
+            Array.Sort(arrayA);
+            Array.Sort(arrayB);
+            for(int i=0; i<arrayA.Length+arrayB.Length; i++)
+            {
+               
+                if(i < arrayA.Length)
+                {
+                    mergeArray[i] = arrayA[i];
+                }
+                else
+                {
+                    mergeArray[i] = arrayB[i - (arrayA.Length)];
+                }
+            }
+            Console.WriteLine("Merged Array");
+            foreach(int value in mergeArray) {
+                Console.Write(value + ", ");
+            }
+            Console.WriteLine();
+            
+
+            // third Question
 
             const int maxRange = 10;
             List<int> oddNumbers = new List<int>();
