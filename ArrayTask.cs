@@ -5,7 +5,8 @@ namespace week_1
 {
     internal class ArrayTask
     {
-        static void Main(string[] args)
+        // renamed the Main to main to run other files in the projects!
+        static void main(string[] args)
         {
 
             // first question

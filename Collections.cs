@@ -53,6 +53,43 @@ namespace week_1
                 Console.WriteLine(queue.Dequeue());
 
             }
+            var list = new LinkedList<int>();
+            list.AddLast(1);
+            list.AddLast(2);
+            list.AddLast(3);
+            list.AddFirst(7);
+            LinkedListNode<int> node = list.Find(2);
+            list.AddBefore(node, 8);
+            foreach (int number in list)
+            {
+                Console.WriteLine(number);
+            }
+            Dictionary<int, string> db = new Dictionary<int, string>() { { 1, "english" }, { 2, "tamil" } };
+            db.Add(3, "Maths");
+            foreach(KeyValuePair<int, string> kvp in db)
+            {
+                Console.WriteLine(kvp.Value);
+            }
+            db[3] = "CS";
+            foreach (KeyValuePair<int, string> kvp in db)
+            {
+                Console.WriteLine(kvp.Value);
+            }
+            SortedDictionary<string, string> collection = new SortedDictionary<string, string>();
+            collection.Add("A", "Apple");
+            collection.Add("Z", "Zeebra");
+            collection.Add("R", "Demo");
+            collection.Add("B", "Mango");
+            foreach (KeyValuePair<string,string> kvp in collection)
+            {
+                Console.WriteLine(kvp.Key + " " + kvp.Value);
+            }
+            foreach (KeyValuePair<string, string> kvp in collection.OrderBy((x)=>x.Value))
+            {
+                Console.WriteLine(kvp.Key + " " + kvp.Value);
+            }
+
+
         }
     }
 }
